@@ -5,8 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "./node_modules/bin/webpack-dev-server",
-    "bundle": "cp src/index.html dist/ & ./node_modules/bin/webpack -p ./dist/bundle.js"
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "bundle": "cp src/index.html dist/ & ./node_modules/.bin/webpack -p ./dist/bundle.js"
   },
   "repository": {
     "type": "git",
