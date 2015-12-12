@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm install",
     "start": "./node_modules/.bin/webpack-dev-server",
-    "bundle": "cp src/index.html dist/ & ./node_modules/.bin/webpack -p ./dist/bundle.js"
+    "bundle": "cp -f src/index.html dist/ & ./node_modules/.bin/webpack -p ./dist/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,11 @@
   "dependencies": {
     "eventemitter2": "0.4.14",
     "flux": "2.1.1",
-    "keymirror": "0.1.1",
-    "lodash": "3.10.1",
     "material-ui": "^0.13.4",
     "object-assign": "4.0.1",
     "react": "0.14.3",
     "react-dom": "0.14.3",
-    "react-tap-event-plugin": "^0.2.1",
-    "roboto-fontface": "^0.4.2"
+    "roboto-fontface": "^0.4.2",
+    "superagent": "^1.5.0"
   }
 }

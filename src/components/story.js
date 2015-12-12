@@ -12,9 +12,13 @@ export class Story extends Component {
   }
 
   render() {
+    const title = this.props.title === 'undefined'
+      ? 'Untitled'
+      : this.props.title;
+
     return (
       <Card>
-        <CardHeader title={ this.props.title } subtitle="By the Dude"/>
+        <h4>{ title }</h4>
         <CardMedia>
           <img src={ this.props.image }/>
         </CardMedia>
