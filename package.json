@@ -34,8 +34,11 @@
     "flux": "2.1.1",
     "keymirror": "0.1.1",
     "lodash": "3.10.1",
+    "material-ui": "^0.13.4",
     "object-assign": "4.0.1",
     "react": "0.14.3",
-    "react-dom": "0.14.3"
+    "react-dom": "0.14.3",
+    "react-tap-event-plugin": "^0.2.1",
+    "roboto-fontface": "^0.4.2"
   }
 }
