@@ -40,7 +40,8 @@ module.exports = {
   // webpack dev server configuration
   devServer: {
     noInfo: false,
-    hot: true
+    hot: true,
+    contentBase: appPath
   },
 
   // support source maps
