@@ -6,6 +6,7 @@ import LightRawTheme from 'material-ui/lib/styles/raw-themes/light-raw-theme';
 
 import { Header } from 'components/header';
 import { Feed } from 'components/feed';
+import NotificationSystem from 'react-notification-system';
 
 export class App extends Component {
 
@@ -15,6 +16,11 @@ export class App extends Component {
     this.state = {
       muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
     }
+
+    this.handleUpdates = this.handleUpdates.bind(this);
+  }
+
+  handleUpdates(event) {
   }
 
   static get childContextTypes() {
@@ -34,6 +40,7 @@ export class App extends Component {
       <div>
         <Header />
         <Feed />
+        <NotificationSystem ref={ (node) => { this.notificationSystem = node; }} />
       </div>
     );
   }

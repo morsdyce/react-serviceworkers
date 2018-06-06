@@ -3,16 +3,14 @@ import EventEmitter from 'eventemitter2';
 import Dispatcher from 'dispatcher/dispatcher';
 
 import FeedConstants from 'constants/feed.constants.json';
-import FlickerAuth from 'constants/flicker.constants.json';
 
 const CHANGE_EVENT = 'CHANGE';
-const base         = `https://api.flickr.com/services/rest/?api_key=${FlickerAuth.API_KEY}&format=rest&format=json&nojsoncallback=1`;
 
 let feedStories = [];
 
 function fetchStories() {
   superagent
-    .get(`${base}&method=flickr.photos.search&tags=cats&sort=interestingness-desc&safe_search=1&per_page=10&page=1`)
+    .get('http://localhost:3000/photoList')
     .end((err, res) => {
       let images = res.body.photos.photo.map(mapToStory);
       feedStories = [...images, ...feedStories];
