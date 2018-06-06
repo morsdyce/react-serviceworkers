@@ -6,18 +6,18 @@ self.addEventListener('activate', event => event.waitUntil(self.clients.claim())
 // precache resources
 toolbox.precache(['/', '/bundle.js']);
 
+//toolbox.fastest
 // set default to network First
 toolbox.router.default = toolbox.networkFirst;
 
-//toolbox.fastest
-toolbox.router.get('/(.*', toolbox.networkFirst, {
+toolbox.router.get('/(.*)', toolbox.networkFirst, {
   cache: {
     name: 'flickr-json-feed',
     maxEntries: 6,
     maxAgeSeconds: 86400,
     networkTimeoutSeconds: 2
   },
-  origin: /\.api\.flickr\.com$/
+  origin: /localhost:3000.*$/
 });
 
 toolbox.router.get('/(.*)', toolbox.cacheFirst, {
